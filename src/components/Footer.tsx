@@ -42,7 +42,7 @@ export default function Footer() {
             </div>
             <div className="flex flex-col">
               <span className="font-extrabold text-base tracking-widest text-white leading-none">
-                KKI BANDUNG
+                KKI KOPO
               </span>
               <span className="text-[9px] text-kki-red font-bold tracking-wider mt-0.5">
                 KUSHIN RYU KARATE-DO
@@ -50,7 +50,7 @@ export default function Footer() {
             </div>
           </div>
           <p className="text-sm font-medium leading-relaxed max-w-sm text-neutral-500">
-            Dojo resmi Kushin Ryu M Karate-Do Indonesia (KKI) di Kota Bandung, Situsaeur. Membina mental disiplin, ketangkasan bela diri fisik, serta melahirkan atlet-atlet karate berprestasi nasional.
+            Dojo resmi Kushin Ryu M Karate-Do Indonesia (KKI) di Kopo, Kota Bandung. Membina mental disiplin, ketangkasan bela diri fisik, serta melahirkan atlet-atlet karate berprestasi nasional.
           </p>
           
           {/* Ikon Sosial Media */}
@@ -146,7 +146,7 @@ export default function Footer() {
       {/* Baris Bawah: Hak Cipta */}
       <div className="max-w-7xl mx-auto px-6 lg:px-8 mt-12 pt-8 border-t border-neutral-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-medium text-neutral-600">
         <span>
-          © {new Date().getFullYear()} KKI Dojo Situsaeur Bandung. All Rights Reserved.
+          © {new Date().getFullYear()} KKI Dojo Kopo. All Rights Reserved.
         </span>
         <div className="flex items-center gap-4">
           <span className="flex items-center gap-1.5">

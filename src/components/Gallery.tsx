@@ -114,7 +114,7 @@ export default function Gallery() {
                       <ZoomIn className="w-5 h-5" />
                     </div>
                     <span className="text-[10px] font-extrabold text-kki-red tracking-widest uppercase mb-1">
-                      KKI BANDUNG
+                      KKI KOPO
                     </span>
                     <h3 className="text-base font-extrabold leading-tight mb-1">
                       {img.title}
@@ -162,7 +162,7 @@ export default function Gallery() {
                           />
                         </div>
                         <span className="text-xs font-bold text-neutral-400">
-                          Pengcab KKI Bandung - Dojo Situsaeur
+                          Pengcab KKI Kopo - Dojo Kopo
                         </span>
                       </div>
                     </div>

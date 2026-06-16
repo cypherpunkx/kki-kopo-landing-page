@@ -95,6 +95,39 @@ export default function AboutClientAnimations() {
         }
       );
 
+      // Animasi Atlet Berprestasi (ScrollTrigger)
+      gsap.fromTo(
+        '.about-achievements-header',
+        { opacity: 0, y: 20 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          scrollTrigger: {
+            trigger: '.about-achievements-header',
+            start: 'top 80%',
+            toggleActions: 'play none none none',
+          },
+        }
+      );
+
+      gsap.fromTo(
+        '.about-achievement-card',
+        { opacity: 0, y: 30, scale: 0.95 },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 0.8,
+          stagger: 0.1,
+          scrollTrigger: {
+            trigger: '.about-achievements-grid',
+            start: 'top 80%',
+            toggleActions: 'play none none none',
+          },
+        }
+      );
+
       // 4. Animasi Profil Instruktur (ScrollTrigger)
       gsap.fromTo(
         '.about-teachers-header',
@@ -120,6 +153,37 @@ export default function AboutClientAnimations() {
           duration: 0.8,
           scrollTrigger: {
             trigger: '.about-teachers-grid',
+            start: 'top 80%',
+            toggleActions: 'play none none none',
+          },
+        }
+      );
+
+      // 5. Animasi Arsip Historis (ScrollTrigger)
+      gsap.fromTo(
+        '.about-archive-header',
+        { opacity: 0, y: 20 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          scrollTrigger: {
+            trigger: '.about-archive-header',
+            start: 'top 80%',
+            toggleActions: 'play none none none',
+          },
+        }
+      );
+
+      gsap.fromTo(
+        '.about-archive-content',
+        { opacity: 0, y: 30 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          scrollTrigger: {
+            trigger: '.about-archive-content',
             start: 'top 80%',
             toggleActions: 'play none none none',
           },

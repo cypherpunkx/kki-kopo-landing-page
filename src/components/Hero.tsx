@@ -66,7 +66,7 @@ export default function Hero() {
           <div className="hero-tag opacity-0 inline-flex items-center gap-2 bg-kki-red/10 border border-kki-red/20 px-4 py-1.5 rounded-full w-fit mb-6">
             <Shield className="w-4 h-4 text-kki-red" />
             <span className="text-xs font-extrabold text-kki-red tracking-widest uppercase">
-              Dojo Situsaeur - Bandung
+              Dojo Kopo
             </span>
           </div>
 
@@ -81,7 +81,7 @@ export default function Hero() {
 
           {/* Deskripsi */}
           <p className="hero-desc opacity-0 text-base sm:text-lg text-neutral-600 font-medium leading-relaxed max-w-xl mb-10">
-            Bergabunglah dengan Kushin Ryu M Karate-Do Indonesia (KKI) Bandung. Kami melatih teknik bela diri legendaris Jepang, ketahanan fisik maksimal, serta kedisiplinan mental untuk segala usia dari tingkat pemula hingga atlet berprestasi.
+            Bergabunglah dengan Kushin Ryu M Karate-Do Indonesia (KKI) Kopo. Kami melatih teknik bela diri legendaris Jepang, ketahanan fisik maksimal, serta kedisiplinan mental untuk segala usia dari tingkat pemula hingga atlet berprestasi.
           </p>
 
           {/* CTA Buttons */}
@@ -150,7 +150,7 @@ export default function Hero() {
                   DOJO TERBAIK 2026
                 </span>
                 <span className="text-[10px] text-neutral-500 font-bold mt-1">
-                  Pengcab KKI Bandung
+                  Pengcab KKI Kopo
                 </span>
               </div>
             </div>

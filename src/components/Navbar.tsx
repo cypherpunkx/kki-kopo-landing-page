@@ -109,7 +109,7 @@ export default function Navbar() {
           </div>
           <div className="flex flex-col">
             <span className="font-extrabold text-base tracking-widest text-kki-black leading-none">
-              KKI BANDUNG
+              KKI KOPO
             </span>
             <span className="text-[9px] text-kki-red font-bold tracking-wider mt-0.5">
               KUSHIN RYU KARATE-DO

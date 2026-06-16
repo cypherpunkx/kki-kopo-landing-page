@@ -10,9 +10,9 @@ export default function Home() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "SportsActivityLocation",
-    name: "Dojo KKI Situsaeur Bandung",
+    name: "Dojo KKI Kopo",
     description:
-      "Dojo resmi Kushin Ryu M Karate-Do Indonesia (KKI) di Kota Bandung, Situsaeur. Melatih fisik, mental, pertahanan diri, dan membina atlet berprestasi.",
+      "Dojo resmi Kushin Ryu M Karate-Do Indonesia (KKI) di Kopo Kota Bandung. Melatih fisik, mental, pertahanan diri, dan membina atlet berprestasi.",
     image: "https://kki-bandung.com/images/hero.png",
     "@id": "https://kki-bandung.com/#dojo",
     url: "https://kki-bandung.com",
@@ -34,15 +34,15 @@ export default function Home() {
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
-        dayOfWeek: ["Tuesday", "Thursday"],
+        dayOfWeek: ["Wednesday", "Saturday"],
         opens: "16:00",
         closes: "18:00",
       },
       {
         "@type": "OpeningHoursSpecification",
-        dayOfWeek: "Saturday",
-        opens: "09:00",
-        closes: "11:30",
+        dayOfWeek: "Sunday",
+        opens: "08:00",
+        closes: "10:00",
       },
     ],
     sameAs: ["https://wa.me/6289676682030"],

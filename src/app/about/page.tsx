@@ -4,20 +4,90 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { Award, ShieldCheck, Users, Target, Calendar } from 'lucide-react';
+import { Award, ShieldCheck, Users, Target, Calendar, Trophy } from 'lucide-react';
 import AboutClientAnimations from './AboutClientAnimations';
+import HistoricalArchives from './HistoricalArchives';
 
 export const metadata: Metadata = {
-  title: "Tentang Kami | KKI Dojo Situsaeur Bandung",
-  description: "Pelajari sejarah aliran karate Kushin Ryu, visi misi Dojo KKI Situsaeur Bandung, serta profil pengajar (sensei) berlisensi resmi FORKI kami.",
-  keywords: ["sejarah kushin ryu", "karate kki bandung", "sejarah kki", "pelatih karate bandung", "visi misi dojo"],
+  title: "Tentang Kami | KKI Dojo Kopo",
+  description: "Pelajari sejarah aliran karate Kushin Ryu, visi misi Dojo KKI Kopo, serta profil pengajar (sensei) berlisensi resmi FORKI kami.",
+  keywords: ["sejarah kushin ryu", "karate kki kopo", "sejarah kki", "pelatih karate kopo", "visi misi dojo"],
 };
 
 const STATS = [
   { label: 'Tahun Didirikan KKI', value: '1967' },
-  { label: 'Dojo Aktif Bandung', value: '10+' },
+  { label: 'Sabuk Hitam Dilahirkan', value: '47+' },
   { label: 'Instruktur Bersertifikat', value: '4' },
   { label: 'Total Siswa Aktif', value: '80+' },
+];
+
+const ACHIEVEMENTS = [
+  {
+    name: 'Cuncun Mulyana, BA',
+    achievements: [
+      'Tim PON Jawa Barat (1989)',
+      'Juara I KATA Beregu Kejurnas KKI (1992)',
+    ],
+  },
+  {
+    name: 'Aat Tedjamahalia',
+    achievements: [
+      'Juara I Kumite Beregu PON (1993)',
+      'Juara I Kumite Beregu Kejurnas KKI (1995)',
+    ],
+  },
+  {
+    name: 'Kapten AL Siti Mulyaningrum (Inge)',
+    achievements: [
+      'Juara II Kumite Kejurnas Piala KSAD',
+      'Tim Nasional Kejuaraan Dunia Wanita di Jepang',
+    ],
+  },
+  {
+    name: 'Lia Nurlianty',
+    achievements: [
+      'Juara III Dunia Kumite Karate di Filipina (1997)',
+      'Tim Nasional Kejuaraan di Australia (1998)',
+      'Tim SEA Games Brunei Darussalam (1999)',
+      'Juara II KATA PON (2000)',
+    ],
+  },
+  {
+    name: 'Eko Hendrawan, S.Sos',
+    achievements: [
+      'Juara Kumite Best of The Best Piala Rudini (1994)',
+      'Juara I Kejurnas Piala Kosgoro (1994)',
+      'Juara I KATA Beregu Kejurnas KKI (2001)',
+    ],
+  },
+  {
+    name: 'Beny Ramdani Sofara',
+    achievements: [
+      'Juara I KATA Kejurnas KKI (2001)',
+      'Juara I KATA Beregu Kejurda FORKI',
+      'Juara III KATA PORDA (2003)',
+    ],
+  },
+  {
+    name: 'Supriyanto',
+    achievements: [
+      'Juara I KATA Beregu Kejurnas KKI (2001)',
+    ],
+  },
+  {
+    name: 'Doddy Hermawan',
+    achievements: [
+      'Tim Pelatnas SEA Games Vietnam (2003)',
+    ],
+  },
+  {
+    name: 'Dang Alan',
+    achievements: [
+      'Juara II Kejurnas Piala Presiden',
+      'Juara II Kejurnas Piala KSAD',
+      'Tim Pelatnas SEA Games',
+    ],
+  },
 ];
 
 const TEACHERS = [
@@ -59,7 +129,7 @@ export default function AboutPage() {
               <span className="text-kki-red">Kushin Ryu Karate-Do</span>
             </h1>
             <p className="about-hero-element opacity-0 text-base sm:text-lg text-neutral-500 font-medium max-w-2xl mx-auto leading-relaxed">
-              Mengenal lebih dekat Dojo KKI Situsaeur Bandung, dedikasi kami dalam mengajarkan bela diri karate tradisional Jepang yang diakui FORKI secara profesional.
+              Mengenal lebih dekat Dojo KKI Kopo, dedikasi kami dalam mengajarkan bela diri karate tradisional Jepang yang diakui FORKI secara profesional.
             </p>
           </div>
         </section>
@@ -94,13 +164,13 @@ export default function AboutPage() {
               
               <div className="space-y-6 text-sm sm:text-base text-neutral-600 font-medium leading-relaxed">
                 <p>
-                  Aliran <strong className="font-extrabold text-kki-black">Kushin Ryu</strong> didirikan di Jepang oleh <strong className="font-extrabold text-kki-black">Horyu Matsutatsu Sano</strong> (Soke). Nama <span className="italic font-bold">Kushin</span> (空心) sendiri memiliki arti secara harfiah <strong className="font-extrabold text-kki-black">"Hati yang Damai dan Kosong"</strong>, merujuk pada ketenangan batin yang absolut saat menghadapi konflik fisik maupun kehidupan.
+                  Aliran <strong className="font-extrabold text-kki-black">Kushin Ryu</strong> didirikan di Jepang oleh <strong className="font-extrabold text-kki-black">Horyu Matsutatsu Sano</strong> (Soke) dan diperkenalkan di Indonesia oleh <strong className="font-extrabold text-kki-black">Sensei Horyu Shinya Matsuzaki</strong> (kini Presiden Kushin Ryu Se-Dunia) pada tahun 1966 di Bandung. Organisasi <strong className="font-extrabold text-kki-black">Kushin Ryu M Karate-Do Indonesia (KKI)</strong> secara resmi didirikan pada <strong className="font-extrabold text-kki-black">11 April 1967</strong> di bawah kepengurusan awal <strong className="font-extrabold text-kki-black">Letjen (Alm) Sarwo Edhi Wibowo</strong> dan <strong className="font-extrabold text-kki-black">Seno Hartono</strong>. KKI merupakan anggota resmi <strong className="font-extrabold text-kki-black">FORKI</strong> yang membina pembentukan karakter dan prestasi olahraga karate nasional.
                 </p>
                 <p>
-                  Di Indonesia, aliran ini secara resmi diperkenalkan pada tahun <strong className="font-extrabold text-kki-black">1967</strong> dan bernaung di bawah organisasi <strong className="font-extrabold text-kki-black">Kushin Ryu M Karate-Do Indonesia (KKI)</strong>. KKI merupakan salah satu dari 25 perguruan karate anggota resmi <strong className="font-extrabold text-kki-black">FORKI</strong> (Federasi Olahraga Karate-Do Indonesia) yang memiliki hak suara dalam pembinaan prestasi olahraga karate tingkat nasional.
+                  <strong className="font-extrabold text-kki-black">KKI Cabang Kopo (Dojo Kopo)</strong> sendiri memiliki akar sejarah yang sangat kuat, berdiri sejak tahun <strong className="font-extrabold text-kki-black">1967</strong>. Dojo ini didirikan pertama kali oleh <strong className="font-extrabold text-kki-black">Mayor (Alm) Anang Alibasyah</strong> yang kala itu bertugas di Kodam VI Siliwangi (sekarang Kodam III Siliwangi). Dimulai sebagai latihan keluarga, Dojo Kopo berkembang pesat hingga merambah jajaran instansi militer, perguruan tinggi, sekolah, serta masyarakat luas di Kopo.
                 </p>
                 <p>
-                  <strong className="font-extrabold text-kki-black">Dojo Situsaeur Bandung</strong> didirikan untuk mendekatkan pelatihan karate berkualitas bagi warga Kota Bandung, khususnya di wilayah Bojongloa Kidul. Kami berdedikasi menjaga warisan teknik bela diri tradisional yang mengutamakan kecepatan reaksi, keefektifan kuncian, sapuan kaki, serta ketahanan mental beladiri praktis.
+                  Estafet kepemimpinan pembinaan Dojo Kopo kemudian dilanjutkan oleh <strong className="font-extrabold text-kki-black">H. A. Sofyan Hambally</strong>, tokoh karate nasional yang kini menjabat sebagai Ketua Dewan Guru KKI Pusat. Beliau mencatatkan sejarah emas sebagai karateka pertama dari Cabang Kopo yang menjuarai Kejuaraan Karate perdana di GOR Saparua, Bandung pada tahun 1969. Kami terus menjaga warisan teknik beladiri orisinal dan tradisi juara ini secara turun-temurun.
                 </p>
               </div>
             </div>
@@ -115,7 +185,7 @@ export default function AboutPage() {
                 HALUAN DOJO
               </h2>
               <p className="text-3xl font-black text-kki-black tracking-tight mb-6">
-                Visi & Misi Dojo Bandung
+                Visi & Misi Dojo Kopo
               </p>
               <div className="h-1.5 w-24 bg-kki-red mx-auto rounded-full" />
             </div>
@@ -161,6 +231,50 @@ export default function AboutPage() {
                 <div key={idx} className="text-center flex flex-col">
                   <span className="text-3xl sm:text-4xl font-black text-kki-black">{stat.value}</span>
                   <span className="text-xs text-neutral-400 font-bold uppercase tracking-wider mt-2">{stat.label}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Hall of Fame - Atlet Berprestasi */}
+        <section className="py-24 bg-white border-t border-neutral-100 relative">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            <div className="text-center max-w-3xl mx-auto mb-20 about-achievements-header opacity-0">
+              <h2 className="text-xs font-extrabold text-kki-red tracking-widest uppercase mb-3">
+                JEJAK PRESTASI
+              </h2>
+              <h3 className="text-3xl font-black text-kki-black tracking-tight mb-6">
+                Hall of Fame: Atlet Legendaris Dojo Kopo
+              </h3>
+              <div className="h-1.5 w-24 bg-kki-red mx-auto rounded-full" />
+              <p className="text-sm text-neutral-500 font-medium leading-relaxed mt-6">
+                Catatan keemasan para karateka binaan Dojo Kopo yang telah membuktikan ketangguhan teknik Kushin Ryu di berbagai kejuaraan daerah, nasional, hingga kancah dunia.
+              </p>
+            </div>
+
+            <div className="about-achievements-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
+              {ACHIEVEMENTS.map((item, idx) => (
+                <div
+                  key={idx}
+                  className="about-achievement-card opacity-0 border border-neutral-100 p-8 rounded-3xl bg-neutral-50/50 hover:bg-white transition-all duration-300 hover:shadow-xl hover:shadow-kki-red/5 hover:-translate-y-1 flex flex-col gap-6"
+                >
+                  <div className="flex gap-4 items-center">
+                    <div className="w-12 h-12 rounded-2xl bg-kki-red/10 flex items-center justify-center text-kki-red shrink-0">
+                      <Trophy className="w-6 h-6" />
+                    </div>
+                    <h4 className="text-lg font-black text-kki-black leading-tight">
+                      {item.name}
+                    </h4>
+                  </div>
+                  <ul className="space-y-3 flex-grow">
+                    {item.achievements.map((ach, aIdx) => (
+                      <li key={aIdx} className="flex gap-2.5 items-start text-xs sm:text-sm text-neutral-500 font-medium leading-relaxed">
+                        <span className="w-1.5 h-1.5 rounded-full bg-kki-red shrink-0 mt-2" />
+                        <span>{ach}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               ))}
             </div>
@@ -218,6 +332,9 @@ export default function AboutPage() {
             </div>
           </div>
         </section>
+
+        {/* Arsip Kepengurusan & Direktori Sabuk Hitam */}
+        <HistoricalArchives />
 
         {/* CTA Bawah */}
         <section className="py-20 bg-kki-black text-white relative overflow-hidden">

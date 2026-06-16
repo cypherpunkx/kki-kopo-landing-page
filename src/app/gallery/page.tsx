@@ -6,9 +6,9 @@ import Footer from '@/components/Footer';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: "Galeri Foto | KKI Dojo Situsaeur Bandung",
-  description: "Lihat galeri dokumentasi foto kegiatan latihan karate Kushin Ryu, upacara ujian kenaikan sabuk, sparring tanding, dan selebrasi prestasi atlet KKI Bandung.",
-  keywords: ["galeri karate bandung", "foto latihan karate", "atlet karate kki", "dokumentasi dojo"],
+  title: "Galeri Foto | KKI Dojo Kopo",
+  description: "Lihat galeri dokumentasi foto kegiatan latihan karate Kushin Ryu, upacara ujian kenaikan sabuk, sparring tanding, dan selebrasi prestasi atlet KKI Kopo.",
+  keywords: ["galeri karate kopo", "foto latihan karate", "atlet karate kki kopo", "dokumentasi dojo"],
 };
 
 export default function GalleryPage() {
@@ -29,7 +29,7 @@ export default function GalleryPage() {
             </span>
             <div className="flex gap-4">
               <a
-                href="https://wa.me/6289676682030?text=Halo%20Admin%20Dojo%20KKI%20Bandung%2C%20saya%20tertarik%20mendaftar%20kelas%20karate%20setelah%20melihat%20galeri."
+                href="https://wa.me/6289676682030?text=Halo%20Admin%20Dojo%20KKI%20Kopo%2C%20saya%20tertarik%20mendaftar%20kelas%20karate%20setelah%20melihat%20galeri."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-kki-red hover:bg-kki-black text-white font-extrabold px-6 py-3 rounded-full text-xs transition-all duration-300 shadow-md cursor-pointer"

@@ -17,7 +17,7 @@ const PROGRAMS = [
     desc: 'Melatih kedisiplinan sejak dini, fokus, koordinasi fisik, serta teknik pertahanan diri anti-bullying dengan metode belajar yang menyenangkan dan interaktif.',
     image: '/images/kids.png',
     features: ['Disiplin Dasar & Karakter', 'Peningkatan Motorik', 'Bela Diri Praktis & Percaya Diri'],
-    waText: 'Halo Dojo KKI Bandung, saya tertarik untuk mendaftarkan anak saya ke Kelas Anak-Anak.',
+    waText: 'Halo Dojo KKI Kopo, saya tertarik untuk mendaftarkan anak saya ke Kelas Anak-Anak.',
   },
   {
     title: 'Kelas Reguler (Remaja & Dewasa)',
@@ -25,7 +25,7 @@ const PROGRAMS = [
     desc: 'Fokus pada teknik tradisional karate (Kihon, Kata, Kumite), latihan fisik menyeluruh untuk kebugaran, kekuatan, pertahanan diri tingkat lanjut, dan pembentukan karakter.',
     image: '/images/hero.png',
     features: ['Kihon, Kata & Kumite', 'Kekuatan & Kebugaran Fisik', 'Teknik Sabuk Hitam Tradisional'],
-    waText: 'Halo Dojo KKI Bandung, saya ingin mendaftar untuk Kelas Reguler Karate.',
+    waText: 'Halo Dojo KKI Kopo, saya ingin mendaftar untuk Kelas Reguler Karate.',
   },
   {
     title: 'Kelas Prestasi (Atlet Kompetisi)',
@@ -33,7 +33,7 @@ const PROGRAMS = [
     desc: 'Dirancang khusus untuk pembinaan atlet kompetisi. Latihan intensif strategi tanding (Kumite kompetitif), ketahanan kardio, kekuatan eksplosif, dan persiapan kejuaraan FORKI.',
     image: '/images/sparring.png',
     features: ['Taktik & Simulasi Tanding', 'Latihan Fisik Keras Atletis', 'Pendampingan Kejuaraan Resmi'],
-    waText: 'Halo Dojo KKI Bandung, saya berminat bergabung ke Kelas Prestasi/Persiapan Kompetisi.',
+    waText: 'Halo Dojo KKI Kopo, saya berminat bergabung ke Kelas Prestasi/Persiapan Kompetisi.',
   },
 ];
 

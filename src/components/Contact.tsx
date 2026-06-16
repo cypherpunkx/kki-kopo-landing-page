@@ -50,7 +50,7 @@ export default function Contact() {
       formData.program === 'Kids' ? 'Kelas Anak-Anak' :
       formData.program === 'Reguler' ? 'Kelas Reguler' : 'Kelas Prestasi';
       
-    const message = `Halo Admin Dojo KKI Bandung,\n\nSaya ingin mendaftar/tanya-tanya mengenai latihan karate:\n- Nama: ${formData.name}\n- Usia: ${formData.age} Tahun\n- Pilihan Kelas: ${programName}\n- Catatan Tambahan: ${formData.notes || '-'}\n\nTerima kasih.`;
+    const message = `Halo Admin Dojo KKI Kopo,\n\nSaya ingin mendaftar/tanya-tanya mengenai latihan karate:\n- Nama: ${formData.name}\n- Usia: ${formData.age} Tahun\n- Pilihan Kelas: ${programName}\n- Catatan Tambahan: ${formData.notes || '-'}\n\nTerima kasih.`;
     
     const waUrl = `https://wa.me/6289676682030?text=${encodeURIComponent(message)}`;
     
@@ -186,7 +186,7 @@ export default function Contact() {
             {/* Peta Google Maps Terintegrasi */}
             <div className="relative w-full h-[320px] rounded-3xl overflow-hidden border border-neutral-200 shadow-lg bg-neutral-100 mt-2">
               <iframe
-                title="Peta Dojo KKI Cetarip Bandung"
+                title="Peta Dojo KKI Kopo"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.6720491741584!2d107.5947702!3d-6.9297491!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e61e05d03b07%3A0xe5a1c3d11b228b3f!2sGg.%20Cetarip%20Timur%20II%20No.4%2C%20Situsaeur%2C%20Kec.%20Bojongloa%20Kidul%2C%20Kota%20Bandung%2C%20Jawa%20Barat%2040234!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid"
                 width="100%"
                 height="100%"

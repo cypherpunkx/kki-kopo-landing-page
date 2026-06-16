@@ -11,20 +11,20 @@ gsap.registerPlugin(ScrollTrigger);
 
 const SCHEDULES = [
   {
-    day: 'Selasa',
+    day: 'Rabu',
     time: '16.00 - 18.00 WIB',
     class: 'Kelas Anak & Kelas Reguler',
     focus: 'Kihon (Teknik Dasar), Penguatan Fisik, Kata Tingkat Awal',
   },
   {
-    day: 'Kamis',
+    day: 'Sabtu',
     time: '16.00 - 18.00 WIB',
     class: 'Kelas Anak & Kelas Reguler',
     focus: 'Kumite Dasar (Aplikasi Pertahanan), Penguasaan Kata, Kebugaran',
   },
   {
-    day: 'Sabtu',
-    time: '09.00 - 11.30 WIB',
+    day: 'Minggu',
+    time: '08.00 - 10.00 WIB',
     class: 'Kelas Reguler & Kelas Prestasi',
     focus: 'Sparring Intensif (Kumite), Taktik Tanding, Pemantapan Sabuk Tinggi',
   },
@@ -41,7 +41,7 @@ const FAQS = [
   },
   {
     q: 'Apakah dojo ini terafiliasi dengan federasi resmi?',
-    a: 'Ya, Dojo KKI Situsaeur berada di bawah naungan resmi Kushin Ryu M Karate-Do Indonesia (KKI) yang terafiliasi langsung dengan FORKI (Federasi Olahraga Karate-Do Indonesia). Sertifikasi sabuk kami diakui secara nasional.',
+    a: 'Ya, Dojo KKI Kopo berada di bawah naungan resmi Kushin Ryu M Karate-Do Indonesia (KKI) yang terafiliasi langsung dengan FORKI (Federasi Olahraga Karate-Do Indonesia). Sertifikasi sabuk kami diakui secara nasional.',
   },
   {
     q: 'Peralatan apa saja yang harus disiapkan saat awal masuk?',

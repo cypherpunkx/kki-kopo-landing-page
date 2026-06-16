@@ -15,10 +15,10 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Kushin Ryu M Karate-Do Indonesia (KKI) Bandung | Dojo Situsaeur",
-  description: "Bergabunglah dengan KKI Dojo Situsaeur Bandung. Pelatihan bela diri karate Kushin Ryu terbaik untuk anak-anak, remaja, dewasa, dan kelas prestasi atlet di Bandung. Latih fisik, mental, dan disiplin tinggi.",
-  keywords: ["karate bandung", "bela diri bandung", "dojo bandung", "kki bandung", "kushin ryu indonesia", "les karate anak bandung", "atlet karate bandung", "karate bojongloa kidul", "karate situsaeur"],
-  authors: [{ name: "Dojo KKI Bandung" }],
+  title: "Kushin Ryu M Karate-Do Indonesia (KKI) Kopo | Dojo Kopo",
+  description: "Bergabunglah dengan KKI Dojo Kopo. Pelatihan bela diri karate Kushin Ryu terbaik untuk anak-anak, remaja, dewasa, dan kelas prestasi atlet di Kopo Bandung. Latih fisik, mental, dan disiplin tinggi.",
+  keywords: ["karate kopo", "bela diri kopo", "dojo kopo", "kki kopo", "kushin ryu indonesia", "les karate anak kopo", "atlet karate bandung", "karate bojongloa kidul", "karate kopo bandung"],
+  authors: [{ name: "Dojo KKI Kopo" }],
   robots: {
     index: true,
     follow: true,
@@ -31,10 +31,10 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Kushin Ryu M Karate-Do Indonesia (KKI) Bandung | Dojo Situsaeur",
-    description: "Bergabunglah dengan KKI Dojo Situsaeur Bandung. Pelatihan bela diri karate Kushin Ryu terbaik untuk anak-anak, remaja, dewasa, dan kelas prestasi atlet di Bandung. Latih fisik, mental, dan disiplin tinggi.",
+    title: "Kushin Ryu M Karate-Do Indonesia (KKI) Kopo | Dojo Kopo",
+    description: "Bergabunglah dengan KKI Dojo Kopo. Pelatihan bela diri karate Kushin Ryu terbaik untuk anak-anak, remaja, dewasa, dan kelas prestasi atlet di Kopo Bandung. Latih fisik, mental, dan disiplin tinggi.",
     url: "https://kki-bandung.com",
-    siteName: "KKI Dojo Situsaeur Bandung",
+    siteName: "KKI Dojo Kopo",
     locale: "id_ID",
     type: "website",
     images: [
@@ -42,14 +42,14 @@ export const metadata: Metadata = {
         url: "https://kki-bandung.com/images/hero.png",
         width: 1200,
         height: 630,
-        alt: "Dojo KKI Situsaeur Bandung Karate",
+        alt: "Dojo KKI Kopo Karate",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Kushin Ryu M Karate-Do Indonesia (KKI) Bandung | Dojo Situsaeur",
-    description: "Pelatihan bela diri karate KKI terbaik di Kota Bandung. Bentuk karakter, fisik, dan raih prestasi olahraga karate.",
+    title: "Kushin Ryu M Karate-Do Indonesia (KKI) Kopo | Dojo Kopo",
+    description: "Pelatihan bela diri karate KKI terbaik di Kopo Bandung. Bentuk karakter, fisik, dan raih prestasi olahraga karate.",
     images: ["https://kki-bandung.com/images/hero.png"],
   },
 };
