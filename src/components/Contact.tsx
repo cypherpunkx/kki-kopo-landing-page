@@ -6,6 +6,25 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import { MapPin, Phone, MessageSquare, Send, Calendar } from 'lucide-react';
+
+const InstagramIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...props}
+  >
+    <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+  </svg>
+);
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -144,6 +163,24 @@ export default function Contact() {
                   </a>
                 </div>
               </div>
+
+              {/* Instagram */}
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-xl bg-pink-50 flex items-center justify-center text-pink-600 shrink-0">
+                  <InstagramIcon className="w-6 h-6" />
+                </div>
+                <div className="flex flex-col">
+                  <span className="text-sm font-extrabold text-kki-black">Instagram Dojo:</span>
+                  <a
+                    href="https://www.instagram.com/kki_kopo/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-pink-600 font-bold hover:underline mt-1"
+                  >
+                    @kki_kopo
+                  </a>
+                </div>
+              </div>
             </div>
 
             {/* Peta Google Maps Terintegrasi */}
@@ -165,7 +202,7 @@ export default function Contact() {
           {/* Bagian Kanan: Formulir Pendaftaran */}
           <div className="lg:col-span-5 contact-form opacity-0">
             <Card className="border border-neutral-100 bg-white shadow-xl rounded-3xl overflow-hidden h-full">
-              <CardContent className="p-8 flex flex-col justify-between h-full">
+              <CardContent className="p-6 sm:p-8 flex flex-col justify-between h-full">
                 <div>
                   <h3 className="text-xl font-extrabold text-kki-black mb-2 flex items-center gap-2">
                     <MessageSquare className="w-5 h-5 text-kki-red" />

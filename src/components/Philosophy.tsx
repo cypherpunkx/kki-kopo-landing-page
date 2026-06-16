@@ -2,6 +2,7 @@
 
 import React, { useEffect } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Card, CardContent } from '@/components/ui/card';
 import { Heart, Compass, ShieldAlert, Award, Star } from 'lucide-react';
 import gsap from 'gsap';
@@ -77,6 +78,22 @@ export default function Philosophy() {
         },
       }
     );
+
+    // Animasi tombol link sejarah selengkapnya saat scroll
+    gsap.fromTo(
+      '.philo-more',
+      { opacity: 0, y: 20 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        scrollTrigger: {
+          trigger: '.philo-more',
+          start: 'top 90%',
+          toggleActions: 'play none none none',
+        },
+      }
+    );
   }, []);
 
   return (
@@ -135,6 +152,17 @@ export default function Philosophy() {
               </Card>
             );
           })}
+        </div>
+
+        {/* Link Ke Halaman About */}
+        <div className="philo-more opacity-0 text-center mt-14 flex justify-center">
+          <Link
+            href="/about"
+            className="group/btn inline-flex items-center gap-2 px-6 py-3 border border-neutral-200 hover:border-kki-red/30 hover:bg-neutral-50 rounded-full text-xs font-bold text-neutral-600 hover:text-kki-red transition-all duration-300 shadow-xs cursor-pointer"
+          >
+            <span>Pelajari Sejarah Kushin Ryu Selengkapnya</span>
+            <span className="inline-block transition-transform duration-300 group-hover/btn:translate-x-1">→</span>
+          </Link>
         </div>
 
       </div>

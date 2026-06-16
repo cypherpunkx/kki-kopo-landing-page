@@ -64,7 +64,7 @@ export default function RootLayout({
       lang="id"
       className={`${outfit.variable} ${plusJakartaSans.variable} h-full antialiased scroll-smooth`}
     >
-      <body className="min-h-full flex flex-col font-sans bg-white text-kki-black selection:bg-kki-red selection:text-white">
+      <body className="min-h-full flex flex-col font-sans bg-white text-kki-black selection:bg-kki-red selection:text-white overflow-x-hidden">
         {children}
       </body>
     </html>

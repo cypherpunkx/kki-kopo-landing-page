@@ -15,38 +15,42 @@ import gsap from 'gsap';
 
 export default function Hero() {
   useEffect(() => {
-    // Animasi GSAP untuk elemen teks Hero
-    const tl = gsap.timeline({ defaults: { ease: 'power4.out' } });
+    const ctx = gsap.context(() => {
+      // Animasi GSAP untuk elemen teks Hero
+      const tl = gsap.timeline({ defaults: { ease: 'power4.out' } });
 
-    tl.fromTo(
-      '.hero-tag',
-      { opacity: 0, scale: 0.8 },
-      { opacity: 1, scale: 1, duration: 0.8, delay: 0.5 }
-    )
-      .fromTo(
-        '.hero-title',
-        { opacity: 0, y: 40 },
-        { opacity: 1, y: 0, duration: 1, stagger: 0.15 },
-        '-=0.5'
+      tl.fromTo(
+        '.hero-tag',
+        { opacity: 0, scale: 0.8 },
+        { opacity: 1, scale: 1, duration: 0.8, delay: 0.5 }
       )
-      .fromTo(
-        '.hero-desc',
-        { opacity: 0, y: 20 },
-        { opacity: 1, y: 0, duration: 0.8 },
-        '-=0.6'
-      )
-      .fromTo(
-        '.hero-cta',
-        { opacity: 0, scale: 0.9 },
-        { opacity: 1, scale: 1, duration: 0.6, stagger: 0.1 },
-        '-=0.4'
-      )
-      .fromTo(
-        '.hero-image-container',
-        { opacity: 0, x: 50 },
-        { opacity: 1, x: 0, duration: 1.2 },
-        '-=0.8'
-      );
+        .fromTo(
+          '.hero-title',
+          { opacity: 0, y: 40 },
+          { opacity: 1, y: 0, duration: 1, stagger: 0.15 },
+          '-=0.5'
+        )
+        .fromTo(
+          '.hero-desc',
+          { opacity: 0, y: 20 },
+          { opacity: 1, y: 0, duration: 0.8 },
+          '-=0.6'
+        )
+        .fromTo(
+          '.hero-cta',
+          { opacity: 0, scale: 0.9 },
+          { opacity: 1, scale: 1, duration: 0.6, stagger: 0.1 },
+          '-=0.4'
+        )
+        .fromTo(
+          '.hero-image-container',
+          { opacity: 0, x: 50 },
+          { opacity: 1, x: 0, duration: 1.2 },
+          '-=0.8'
+        );
+    });
+
+    return () => ctx.revert();
   }, []);
 
   return (

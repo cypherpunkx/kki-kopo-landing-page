@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -10,6 +11,8 @@ import gsap from 'gsap';
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const pathname = usePathname();
+  const [activeSection, setActiveSection] = useState('');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,6 +26,57 @@ export default function Navbar() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  useEffect(() => {
+    if (pathname !== '/') {
+      setActiveSection('');
+      return;
+    }
+
+    const sections = ['filosofi', 'program', 'jadwal', 'lokasi'];
+    const handleScrollActive = () => {
+      const scrollPosition = window.scrollY + 280;
+
+      if (window.scrollY < 100) {
+        setActiveSection('');
+        return;
+      }
+
+      for (const sectionId of sections) {
+        const el = document.getElementById(sectionId);
+        if (el) {
+          const top = el.offsetTop;
+          const height = el.offsetHeight;
+          if (scrollPosition >= top && scrollPosition < top + height) {
+            setActiveSection(sectionId);
+            break;
+          }
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScrollActive);
+    handleScrollActive();
+
+    return () => window.removeEventListener('scroll', handleScrollActive);
+  }, [pathname]);
+
+  const isLinkActive = (href: string) => {
+    if (href === '/about') {
+      return pathname === '/about';
+    }
+    if (href === '/gallery') {
+      return pathname === '/gallery';
+    }
+    if (href.startsWith('/#')) {
+      const targetHash = href.substring(2);
+      return pathname === '/' && activeSection === targetHash;
+    }
+    if (href === '/') {
+      return pathname === '/' && activeSection === '';
+    }
+    return false;
+  };
 
   // Animasi logo & menu dengan GSAP saat pertama kali masuk
   useEffect(() => {
@@ -66,28 +120,70 @@ export default function Navbar() {
         {/* Menu Desktop */}
         <div className="hidden md:flex items-center gap-8 nav-item">
           <Link
-            href="#filosofi"
-            className="text-sm font-semibold text-neutral-600 hover:text-kki-red transition-colors"
+            href="/about"
+            className={`relative text-sm font-semibold transition-all duration-300 ${
+              isLinkActive('/about') ? 'text-kki-red font-bold' : 'text-neutral-600 hover:text-kki-red'
+            }`}
+          >
+            Tentang Kami
+            {isLinkActive('/about') && (
+              <span className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-1.5 h-1.5 bg-kki-red rounded-full animate-pulse" />
+            )}
+          </Link>
+          <Link
+            href="/#filosofi"
+            className={`relative text-sm font-semibold transition-all duration-300 ${
+              isLinkActive('/#filosofi') ? 'text-kki-red font-bold' : 'text-neutral-600 hover:text-kki-red'
+            }`}
           >
             Filosofi
+            {isLinkActive('/#filosofi') && (
+              <span className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-1.5 h-1.5 bg-kki-red rounded-full animate-pulse" />
+            )}
           </Link>
           <Link
-            href="#program"
-            className="text-sm font-semibold text-neutral-600 hover:text-kki-red transition-colors"
+            href="/#program"
+            className={`relative text-sm font-semibold transition-all duration-300 ${
+              isLinkActive('/#program') ? 'text-kki-red font-bold' : 'text-neutral-600 hover:text-kki-red'
+            }`}
           >
             Program Latihan
+            {isLinkActive('/#program') && (
+              <span className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-1.5 h-1.5 bg-kki-red rounded-full animate-pulse" />
+            )}
           </Link>
           <Link
-            href="#jadwal"
-            className="text-sm font-semibold text-neutral-600 hover:text-kki-red transition-colors"
+            href="/gallery"
+            className={`relative text-sm font-semibold transition-all duration-300 ${
+              isLinkActive('/gallery') ? 'text-kki-red font-bold' : 'text-neutral-600 hover:text-kki-red'
+            }`}
+          >
+            Galeri Foto
+            {isLinkActive('/gallery') && (
+              <span className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-1.5 h-1.5 bg-kki-red rounded-full animate-pulse" />
+            )}
+          </Link>
+          <Link
+            href="/#jadwal"
+            className={`relative text-sm font-semibold transition-all duration-300 ${
+              isLinkActive('/#jadwal') ? 'text-kki-red font-bold' : 'text-neutral-600 hover:text-kki-red'
+            }`}
           >
             Jadwal Dojo
+            {isLinkActive('/#jadwal') && (
+              <span className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-1.5 h-1.5 bg-kki-red rounded-full animate-pulse" />
+            )}
           </Link>
           <Link
-            href="#lokasi"
-            className="text-sm font-semibold text-neutral-600 hover:text-kki-red transition-colors"
+            href="/#lokasi"
+            className={`relative text-sm font-semibold transition-all duration-300 ${
+              isLinkActive('/#lokasi') ? 'text-kki-red font-bold' : 'text-neutral-600 hover:text-kki-red'
+            }`}
           >
             Lokasi & Kontak
+            {isLinkActive('/#lokasi') && (
+              <span className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-1.5 h-1.5 bg-kki-red rounded-full animate-pulse" />
+            )}
           </Link>
         </div>
 
@@ -117,30 +213,68 @@ export default function Navbar() {
       {isOpen && (
         <div className="md:hidden absolute top-full left-0 w-full bg-white border-b border-neutral-100 shadow-xl py-6 px-8 flex flex-col gap-6 animate-fade-in-down">
           <Link
-            href="#filosofi"
+            href="/about"
             onClick={() => setIsOpen(false)}
-            className="text-base font-bold text-neutral-700 hover:text-kki-red transition-colors"
+            className={`text-base font-bold transition-all duration-300 pl-3 border-l-2 ${
+              isLinkActive('/about')
+                ? 'text-kki-red border-kki-red'
+                : 'text-neutral-700 hover:text-kki-red border-transparent'
+            }`}
+          >
+            Tentang Kami
+          </Link>
+          <Link
+            href="/#filosofi"
+            onClick={() => setIsOpen(false)}
+            className={`text-base font-bold transition-all duration-300 pl-3 border-l-2 ${
+              isLinkActive('/#filosofi')
+                ? 'text-kki-red border-kki-red'
+                : 'text-neutral-700 hover:text-kki-red border-transparent'
+            }`}
           >
             Filosofi
           </Link>
           <Link
-            href="#program"
+            href="/#program"
             onClick={() => setIsOpen(false)}
-            className="text-base font-bold text-neutral-700 hover:text-kki-red transition-colors"
+            className={`text-base font-bold transition-all duration-300 pl-3 border-l-2 ${
+              isLinkActive('/#program')
+                ? 'text-kki-red border-kki-red'
+                : 'text-neutral-700 hover:text-kki-red border-transparent'
+            }`}
           >
             Program Latihan
           </Link>
           <Link
-            href="#jadwal"
+            href="/gallery"
             onClick={() => setIsOpen(false)}
-            className="text-base font-bold text-neutral-700 hover:text-kki-red transition-colors"
+            className={`text-base font-bold transition-all duration-300 pl-3 border-l-2 ${
+              isLinkActive('/gallery')
+                ? 'text-kki-red border-kki-red'
+                : 'text-neutral-700 hover:text-kki-red border-transparent'
+            }`}
+          >
+            Galeri Foto
+          </Link>
+          <Link
+            href="/#jadwal"
+            onClick={() => setIsOpen(false)}
+            className={`text-base font-bold transition-all duration-300 pl-3 border-l-2 ${
+              isLinkActive('/#jadwal')
+                ? 'text-kki-red border-kki-red'
+                : 'text-neutral-700 hover:text-kki-red border-transparent'
+            }`}
           >
             Jadwal Dojo
           </Link>
           <Link
-            href="#lokasi"
+            href="/#lokasi"
             onClick={() => setIsOpen(false)}
-            className="text-base font-bold text-neutral-700 hover:text-kki-red transition-colors"
+            className={`text-base font-bold transition-all duration-300 pl-3 border-l-2 ${
+              isLinkActive('/#lokasi')
+                ? 'text-kki-red border-kki-red'
+                : 'text-neutral-700 hover:text-kki-red border-transparent'
+            }`}
           >
             Lokasi & Kontak
           </Link>

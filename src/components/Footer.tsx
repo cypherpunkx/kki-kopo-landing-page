@@ -5,6 +5,25 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Shield, Phone, MapPin, Award } from 'lucide-react';
 
+const InstagramIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...props}
+  >
+    <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+  </svg>
+);
+
 export default function Footer() {
   return (
     <footer className="bg-kki-black text-neutral-400 py-16 border-t border-neutral-800">
@@ -33,6 +52,28 @@ export default function Footer() {
           <p className="text-sm font-medium leading-relaxed max-w-sm text-neutral-500">
             Dojo resmi Kushin Ryu M Karate-Do Indonesia (KKI) di Kota Bandung, Situsaeur. Membina mental disiplin, ketangkasan bela diri fisik, serta melahirkan atlet-atlet karate berprestasi nasional.
           </p>
+          
+          {/* Ikon Sosial Media */}
+          <div className="flex items-center gap-4">
+            <a
+              href="https://www.instagram.com/kki_kopo/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 rounded-full border border-neutral-800 hover:border-kki-red hover:bg-kki-red/10 text-neutral-500 hover:text-kki-red flex items-center justify-center transition-all duration-300 cursor-pointer"
+              aria-label="Instagram Dojo KKI Kopo"
+            >
+              <InstagramIcon className="w-5 h-5" />
+            </a>
+            <a
+              href="https://wa.me/6289676682030"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 rounded-full border border-neutral-800 hover:border-kki-red hover:bg-kki-red/10 text-neutral-500 hover:text-kki-red flex items-center justify-center transition-all duration-300 cursor-pointer"
+              aria-label="WhatsApp Dojo KKI Kopo"
+            >
+              <Phone className="w-5 h-5" />
+            </a>
+          </div>
         </div>
 
         {/* Kolom Tengah: Tautan Cepat */}
@@ -42,22 +83,32 @@ export default function Footer() {
           </h4>
           <ul className="space-y-3 flex flex-col text-sm font-medium">
             <li>
-              <Link href="#filosofi" className="hover:text-kki-red transition-colors">
+              <Link href="/about" className="hover:text-kki-red transition-colors">
+                Tentang Kami
+              </Link>
+            </li>
+            <li>
+              <Link href="/#filosofi" className="hover:text-kki-red transition-colors">
                 Filosofi Aliran
               </Link>
             </li>
             <li>
-              <Link href="#program" className="hover:text-kki-red transition-colors">
+              <Link href="/#program" className="hover:text-kki-red transition-colors">
                 Program Latihan
               </Link>
             </li>
             <li>
-              <Link href="#jadwal" className="hover:text-kki-red transition-colors">
+              <Link href="/gallery" className="hover:text-kki-red transition-colors">
+                Galeri Foto
+              </Link>
+            </li>
+            <li>
+              <Link href="/#jadwal" className="hover:text-kki-red transition-colors">
                 Jadwal Latihan
               </Link>
             </li>
             <li>
-              <Link href="#lokasi" className="hover:text-kki-red transition-colors">
+              <Link href="/#lokasi" className="hover:text-kki-red transition-colors">
                 Hubungi Kami
               </Link>
             </li>
